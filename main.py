@@ -99,7 +99,7 @@ def numar_divizori_proprii(x) -> int:
 
 def test_numar_divizori_proprii():
     assert(numar_divizori_proprii(13)) == 0
-    assert (numar_divizori_proprii(8)) == 2
+    assert (numar_divizori_proprii(12)) == 3
     assert (numar_divizori_proprii(25)) == 1
 
 
@@ -120,13 +120,17 @@ def procesare_lista(lista: list) -> list:
 
 
 def test_procesare_lista():
-    assert(procesare_lista([25, 13, 26, 13, 19])) is [1, 13, 1, 13, 0]
-    assert (procesare_lista([25, 13, 26, 19])) is [1, 0, 1, 0]
-    assert (procesare_lista([25, 13, 25, 13])) is [25, 13, 25, 13]
+    assert(procesare_lista([25, 13, 26, 13, 19])) == [1, 13, 1, 13, 0]
+    assert (procesare_lista([25, 13, 26, 19])) == [1, 0, 1, 0]
+    assert (procesare_lista([25, 13, 25, 13])) == [25, 13, 25, 13]
 
 
 def main():
     test_eliminare_duplicate()
+    test_suma_primelor_n_pozitive()
+    test_toate_elementele_pozitive_ordonate_crescator()
+    test_numar_divizori_proprii()
+    test_procesare_lista()
     while True:
         tipareste_meniu()
         optiune = input("Introduceti optiunea: ")
